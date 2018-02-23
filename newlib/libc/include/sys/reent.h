@@ -416,6 +416,8 @@ struct _reent
   __FILE *__sf;			        /* file descriptors */
   struct _misc_reent *_misc;            /* strtok, multibyte states */
   char *_signal_buf;                    /* strsignal */
+
+  void *deviceData;
 };
 
 extern const struct __sFILE_fake __sf_fake_stdin;
@@ -645,6 +647,7 @@ struct _reent
      would be broken otherwise).  */
   struct _glue __sglue;		/* root of glue chain */
   __FILE __sf[3];  		/* first three file descriptors */
+  void *deviceData;
 };
 
 #define _REENT_INIT(var) \

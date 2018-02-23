@@ -7,6 +7,7 @@
 #include <errno.h>
 #include "local.h"
 
+
 int
 _DEFUN (_mbtowc_r, (r, pwc, s, n, state),
         struct _reent *r   _AND

@@ -252,7 +252,8 @@ _DEFUN(__sinit, (s),
 
   /* POSIX requires stderr to be opened for reading and writing, even
      when the underlying fd 2 is write-only.  */
-  std (s->_stderr, __SRW | __SNBF, 2, s);
+  //std (s->_stderr, __SRW | __SNBF, 2, s);
+  std (s->_stderr, __SWR | __SLBF, 2, s);
 
   s->__sdidinit = 1;
 

@@ -35,7 +35,7 @@ the sequence of calls may go <<__malloc_lock>>, <<__malloc_lock>>,
 routines must be careful to avoid causing a thread to wait for a lock
 that it already holds.
 */
-
+#if 0
 #include <malloc.h>
 #include <sys/lock.h>
 
@@ -60,5 +60,5 @@ __malloc_unlock (ptr)
   __lock_release_recursive (__malloc_lock_object);
 #endif
 }
-
+#endif
 #endif
